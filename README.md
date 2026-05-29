@@ -9,11 +9,16 @@
 
 
 
-
-# LexiRAG — AI-Powered Indian Legal Assistant
-
 RAG-based legal chatbot for the Indian Constitution, IPC, judgments, and legal acts.
 Runs fully offline on your laptop using open-source models.
+
+## 📸 Demo
+![LexiRAG Screenshot](screenshot1.png)
+## 📸 Demo
+![LexiRAG Screenshot](screenshot2.png)
+## 📸 Demo
+![LexiRAG Screenshot](screenshot3.png)
+
 
 ---
 
