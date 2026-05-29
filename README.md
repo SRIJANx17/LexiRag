@@ -1,3 +1,15 @@
+# ⚖️ LexiRAG — AI-Powered Indian Legal Assistant
+
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![LangChain](https://img.shields.io/badge/LangChain-0.2.16-green)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.112-teal)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.38-red)
+![Groq](https://img.shields.io/badge/LLM-Groq-orange)
+![ChromaDB](https://img.shields.io/badge/VectorDB-ChromaDB-purple)
+
+
+
+
 # LexiRAG — AI-Powered Indian Legal Assistant
 
 RAG-based legal chatbot for the Indian Constitution, IPC, judgments, and legal acts.
@@ -141,3 +153,9 @@ Full interactive docs: http://localhost:8000/docs
 **"ChromaDB has 0 chunks"** — you need to run the ingestion step first. See Step 4 above.
 
 **Out of memory** — switch to a smaller model: set `OLLAMA_MODEL=phi3` in `.env` and run `ollama pull phi3`.
+
+
+## Demo
+![LexiRAG Demo](C:\Users\srija\OneDrive\Pictures\Screenshots 1\Screenshot 2026-05-29 175551.png)
+![LexiRAG Demo](C:\Users\srija\OneDrive\Pictures\Screenshots 1\Screenshot 2026-05-29 175615.png)
+![LexiRAG Demo](C:\Users\srija\OneDrive\Pictures\Screenshots 1\Screenshot 2026-05-29 175700.png)
