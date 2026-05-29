@@ -13,28 +13,6 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from dotenv import load_dotenv
 
-def download_chromadb_if_needed():
-    """Download ChromaDB from Hugging Face Hub if not present locally."""
-    import os
-    chroma_path = os.getenv("CHROMA_DB_PATH", "./chroma_db")
-    sqlite_path = os.path.join(chroma_path, "chroma.sqlite3")
-    
-    if not os.path.exists(sqlite_path):
-        print("ChromaDB not found. Downloading from Hugging Face Hub...")
-        try:
-            from huggingface_hub import snapshot_download
-            snapshot_download(
-                repo_id="Srijan-17/lexirag-chromadb",
-                repo_type="dataset",
-                local_dir=chroma_path,
-                token=os.getenv("HF_TOKEN"),
-            )
-            print("ChromaDB downloaded successfully.")
-        except Exception as e:
-            print(f"Failed to download ChromaDB: {e}")
-    else:
-        print("ChromaDB found locally — skipping download.")
-
 from app.rag.engine import engine
 from app.rag.ingest import load_pdf_smart, chunk_documents, store_in_chroma
 from app.summarizer.summarizer import summarize_legal_text, simplify_legal_text
@@ -85,7 +63,6 @@ class ClearSessionRequest(BaseModel):
 
 @app.on_event("startup")
 async def startup_event():
-    download_chromadb_if_needed()
     engine.initialize()
 
 # ─── Health ─────────────────────────────────────────────────────────────────
