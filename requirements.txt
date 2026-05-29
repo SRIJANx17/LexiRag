@@ -1,0 +1,37 @@
+# Core RAG
+langchain==0.2.16
+langchain-community==0.2.16
+langchain-core==0.2.38
+chromadb==0.5.5
+sentence-transformers==3.0.1
+
+# LLM runtime
+ollama==0.3.1
+
+# PDF handling
+pypdf==4.3.1
+pdfplumber==0.11.4
+easyocr==1.7.1
+
+# Backend
+fastapi==0.112.1
+uvicorn==0.30.6
+python-multipart==0.0.9
+pydantic==2.8.2
+
+# Frontend
+streamlit==1.38.0
+
+# NLP
+transformers==4.44.2
+torch==2.4.0
+sentencepiece==0.2.0
+sacremoses==0.1.1
+
+# Summarization
+accelerate==0.33.0
+
+# Utilities
+python-dotenv==1.0.1
+requests==2.32.3
+numpy==1.26.4
